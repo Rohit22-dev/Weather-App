@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  color: white;
+}
+
+.grad {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right,gray, white);
+}
+
+
+.flexx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass {
+  background: rgba( 35, 35, 35, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba(161, 161, 161, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+}
