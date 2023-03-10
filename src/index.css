@@ -12,6 +12,14 @@ body,
   font-size: 15px;
   font-weight: 200;
   color: white;
+
+  /* background: rgb(190, 18, 60);
+  background: radial-gradient(
+    circle,
+    rgba(190, 18, 60, 1) 0%,
+    rgba(63, 14, 39, 0.7) 50%,
+    rgba(1, 14, 54, 1) 100%
+  ); */
 }
 
 .grad {
@@ -29,7 +37,7 @@ body,
 
 .glass {
   background: rgba( 35, 35, 35, 0.25 );
-  box-shadow: 0 8px 32px 0 rgba(161, 161, 161, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
 }

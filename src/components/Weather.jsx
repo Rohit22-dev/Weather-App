@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { BsFan, BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import AdditionalData from "./AdditionalData";
 import { Background } from "./Background";
+import Footer from "./Footer";
 
 const Weather = () => {
   const weekday = [
@@ -56,11 +57,6 @@ const Weather = () => {
             setWeather(data);
             setWICON(data.weather[0].icon);
             setEndpoint(getBackground(data.weather[0].main));
-            let temp = data.main.temp;
-            {
-              temp > 45 ? (temp = 100) : (temp = (temp * 100) / 45);
-            }
-            setHeight(Math.round(temp));
           });
       } catch (error) {
         console.log(error);
@@ -74,11 +70,16 @@ const Weather = () => {
         src={`https://ik.imagekit.io/octivion/Weather/${endpoint}`}
         className="absolute -z-10 object-cover w-full h-full"
       />
+
       <Navbar city={Data?.name} setWeather={setWeather} setCity={setCity} />
+
       <div className="flex justify-between flex-col glass w-11/12 sm:w-3/5 h-2/3 m-auto rounded-3xl overflow-hidden ">
         <div className="flex justify-between items-center p-3 px-10 text-2xl bg-[#00000080]">
           <p className="font-body">{cday}</p>
-
+          <BsFan
+            className=" text-red-500 animate-spin-slow hover:animate-spin hover:text-emerald-500"
+            size={40}
+          />
           <div className="flex gap-4 items-center">
             <p className="font-mono font-semibold ">
               {Data && Data.weather[0].main}
@@ -88,11 +89,6 @@ const Weather = () => {
         </div>
 
         <div className="flex flex-1 flex-col md:flex-row justify-around items-center px-10 relative mt-4">
-          <div className=" absolute border border-black w-2 h-full left-8 rounded-full">
-            <div
-              className={`h-[${height}%] rounded-full bg-gradient-to-t from-orange-500 to-red-500 mt-auto`}
-            ></div>
-          </div>
           <p className="text-7xl lg:text-9xl font-display text-black">
             {Data ? Data.main.temp : "--"}
             <span className="font-body">°c</span>
@@ -118,6 +114,8 @@ const Weather = () => {
           <AdditionalData item="Min temp" value={Data?.main.temp_min} />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

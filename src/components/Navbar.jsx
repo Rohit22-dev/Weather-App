@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdLocationOn } from "react-icons/md";
 import { FcSearch } from "react-icons/fc";
 
