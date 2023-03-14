@@ -27,7 +27,7 @@ const Navbar = ({ city, setWeather, setCity }) => {
   return (
     <div className="flex flex-col glass p-3 items-center gap-4">
       <div className="flex h-fit w-4/5 justify-between items-center">
-        <p className="text-2xl font-display text-white">Weather </p>
+        <p className="text-2xl font-display">Weather </p>
         <div className="flex gap-1 group ">
           <MdLocationOn
             className="left-5 group-hover:animate-bounce"

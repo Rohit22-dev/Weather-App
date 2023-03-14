@@ -13,13 +13,13 @@ body,
   font-weight: 200;
   color: white;
 
-  /* background: rgb(190, 18, 60);
+  background: rgb(190, 18, 60);
   background: radial-gradient(
     circle,
-    rgba(190, 18, 60, 1) 0%,
-    rgba(63, 14, 39, 0.7) 50%,
-    rgba(1, 14, 54, 1) 100%
-  ); */
+    rgb(0, 251, 255) 0%,
+    rgb(0, 174, 255) 50%,
+    rgb(0, 59, 235) 100%
+  );
 }
 
 .grad {

@@ -66,10 +66,10 @@ const Weather = () => {
   }, [city]);
   return (
     <div className="flex flex-col w-screen h-screen relative">
-      <img
+      {/* <img
         src={`https://ik.imagekit.io/octivion/Weather/${endpoint}`}
         className="absolute -z-10 object-cover w-full h-full"
-      />
+      /> */}
 
       <Navbar city={Data?.name} setWeather={setWeather} setCity={setCity} />
 
@@ -77,7 +77,7 @@ const Weather = () => {
         <div className="flex justify-between items-center p-3 px-10 text-2xl bg-[#00000080]">
           <p className="font-body">{cday}</p>
           <BsFan
-            className=" text-red-500 animate-spin-slow hover:animate-spin hover:text-emerald-500"
+            className=" text-sky-500 animate-spin-slow hover:animate-spin hover:text-cyan-500"
             size={40}
           />
           <div className="flex gap-4 items-center">
@@ -93,13 +93,13 @@ const Weather = () => {
             {Data ? Data.main.temp : "--"}
             <span className="font-body">°c</span>
           </p>
-          <div className="flex flex-col justify-center text-xs shadow-md shadow-black h-fit rounded-lg p-2 gap-1">
+          <div className="flex flex-col justify-center text-sm shadow-md shadow-black h-fit rounded-lg p-2 gap-1">
             <div className="flex items-center gap-2">
-              <BsFillSunFill className=" text-amber-500" size={16} />
+              <BsFillSunFill className=" text-amber-500" size={20} />
               <p>{timeConversion(Data?.sys.sunrise)}</p>
             </div>
             <div className="flex items-center gap-2">
-              <BsFillMoonStarsFill className=" text-zinc-800" size={16} />
+              <BsFillMoonStarsFill className=" text-zinc-800" size={20} />
               <p>{timeConversion(Data?.sys.sunset)}</p>
             </div>
           </div>
